@@ -6,28 +6,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    android:backgroundTint="#E4263947"
+    android:backgroundTint="#D51F272C"
     android:contextClickable="false"
     tools:context=".MainActivity">
 
 
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="0dp"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#262F33"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_vertical"
+            android:text="@string/SimpleCalc"
+            android:textColor="#E3D7D7"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="14dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/resultField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:background="@null"
         android:fontFamily="sans-serif-medium"
-        android:inputType="number"
-        android:text="0"
-        android:textAlignment="textEnd"
+        android:gravity="right"
+        android:textAlignment="gravity"
         android:textColor="#FFFFFF"
-        android:textSize="50dp"
+        android:textColorHint="#FFFFFF"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.84000003"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -35,7 +57,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/layout_bg"
 
-        android:backgroundTint="#4E616C"
+        android:backgroundTint="#262F33"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,12 +78,17 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="true"
+                android:fontFamily="sans-serif-medium"
                 android:maxWidth="100dp"
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/clear"
-                android:textColor="#FD5454"
+                android:textColor="#F3FF3C3C"
                 android:textSize="33dp" />
 
             <Button
@@ -71,12 +98,14 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-black"
                 android:maxWidth="100dp"
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/divide"
-                android:textColor="#FD5454"
+                android:textColor="#F3FF3C3C"
                 android:textSize="33dp" />
 
             <Button
@@ -86,12 +115,14 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-black"
                 android:maxWidth="100dp"
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/mult"
-                android:textColor="#FD5454"
+                android:textColor="#F3FF3C3C"
                 android:textSize="33dp" />
 
             <Button
@@ -101,15 +132,17 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxWidth="100dp"
+                android:fontFamily="sans-serif-black"
+                android:maxWidth="50dp"
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/backspace"
                 android:textAllCaps="true"
-                android:textColor="#FD5454"
+                android:textColor="#F3FF3C3C"
                 android:textScaleX="1.3"
-                android:textSize="33dp"
+                android:textSize="25dp"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -131,6 +164,7 @@
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/seven"
                 android:textColor="#FFFFFF"
                 android:textSize="33dp" />
@@ -146,6 +180,7 @@
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/eight"
                 android:textColor="#FFFFFFFF"
                 android:textSize="33dp" />
@@ -161,6 +196,7 @@
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/nine"
                 android:textColor="#FFFFFFFF"
                 android:textSize="33dp" />
@@ -172,12 +208,14 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxWidth="100dp"
+                android:fontFamily="sans-serif-black"
+                android:maxWidth="50dp"
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/minus"
-                android:textColor="#FD5454"
+                android:textColor="#F3FF3C3C"
                 android:textScaleX="1.8"
                 android:textSize="30dp" />
 
@@ -200,6 +238,7 @@
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/four"
                 android:textColor="#FFFFFFFF"
                 android:textSize="33dp" />
@@ -215,6 +254,7 @@
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/five"
                 android:textColor="#FFFFFFFF"
                 android:textSize="33dp" />
@@ -230,6 +270,7 @@
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/six"
                 android:textColor="#FFFFFFFF"
                 android:textSize="33dp" />
@@ -241,12 +282,14 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-black"
                 android:maxWidth="100dp"
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/plus"
-                android:textColor="#FD5454"
+                android:textColor="#F3FF3C3C"
                 android:textSize="33dp" />
 
         </TableRow>
@@ -268,6 +311,7 @@
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/one"
                 android:textColor="#FFFFFFFF"
                 android:textSize="33dp" />
@@ -283,6 +327,7 @@
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/two"
                 android:textColor="#FFFFFFFF"
                 android:textSize="33dp" />
@@ -298,6 +343,7 @@
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/three"
                 android:textColor="#FFFFFFFF"
                 android:textSize="33dp" />
@@ -309,12 +355,14 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-black"
                 android:maxWidth="100dp"
                 android:maxHeight="100dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/comma"
-                android:textColor="#FD5454"
+                android:textColor="#F3FF3C3C"
                 android:textSize="33dp" />
 
         </TableRow>
@@ -324,7 +372,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="35dp">
+            android:layout_marginBottom="25dp">
 
             <Button
                 android:id="@+id/buttonZero"
@@ -337,6 +385,7 @@
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/zero"
                 android:textColor="#FFFFFFFF"
                 android:textSize="33dp" />
@@ -348,12 +397,14 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-black"
                 android:maxWidth="100dp"
                 android:maxHeight="200dp"
                 android:minWidth="50dp"
                 android:minHeight="75dp"
+                android:onClick="onClickBtn"
                 android:text="@string/equals"
-                android:textColor="#FD5454"
+                android:textColor="#F3FF3C3C"
                 android:textSize="33dp" />
 
         </TableRow>
