@@ -83,13 +83,16 @@ public class MainActivity extends AppCompatActivity {
         String exp = resultField.getText().toString();
         exp = exp.replaceAll("×", "*");
         exp = exp.replaceAll("÷", "/");
+        exp = exp.replaceAll(",", ".");
         //remove lonely operator that are not followed by a number ex. 2 + 3 +
         if (exp.matches(".+[+-\\/*.]$")) {
             exp = exp.substring(0, exp.length() - 1);
         }
         Expression expression = new ExpressionBuilder(exp).build();
         double result = expression.evaluate();
-        DecimalFormat f = new DecimalFormat("##.0000");
-        resultField.setText((f.format(result)));
+        DecimalFormat f = new DecimalFormat("##.####");
+        String resultVal = f.format(result);
+        resultVal = resultVal.replaceAll(",", ".");
+        resultField.setText(resultVal);
     }
 }
