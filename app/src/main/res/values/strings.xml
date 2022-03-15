@@ -21,12 +21,13 @@
     <string name="sinus">sin</string>
     <string name="cosinus">cos</string>
     <string name="tangens">tan</string>
-    <string name="log">log</string>
-    <string name="ln">ln</string>
+    <string name="logNat">ln</string>
+    <string name="log10">log</string>
     <string name="square2">√</string>
     <string name="power2">x²</string>
     <string name="powerY">xʸ</string>
     <string name="percent">%</string>
+    <string name="rightBracket">)</string>
     <string name="result">0</string>
     <string name="SimpleCalc">Simple Calc</string>
     <string name="AdvancedCalc">Advanced Calc</string>
