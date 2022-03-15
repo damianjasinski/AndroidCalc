@@ -30,6 +30,25 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <EditText
+        android:id="@+id/resultField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="right"
+        android:textAlignment="gravity"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="0dp"
@@ -51,7 +70,7 @@
             android:layout_marginBottom="6dp">
 
             <Button
-                android:id="@+id/buttonC"
+                android:id="@+id/buttonSquare"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -71,7 +90,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/buttonDiv"
+                android:id="@+id/buttonPower2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -88,7 +107,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/buttonMul"
+                android:id="@+id/buttonPowerY"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -105,7 +124,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/buttonBack"
+                android:id="@+id/buttonPerc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -131,7 +150,7 @@
             android:layout_marginBottom="6dp">
 
             <Button
-                android:id="@+id/buttonC"
+                android:id="@+id/buttonSin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -151,7 +170,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/buttonDiv"
+                android:id="@+id/buttonCos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -168,7 +187,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/buttonMul"
+                android:id="@+id/buttonTan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -185,7 +204,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/buttonBack"
+                android:id="@+id/buttonLog"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
@@ -246,7 +265,7 @@
                 android:textSize="24sp" />
 
             <Button
-                android:id="@+id/buttonMul"
+                android:id="@+id/buttonMult"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
