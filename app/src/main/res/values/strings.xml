@@ -18,6 +18,14 @@
     <string name="plus">+</string>
     <string name="equals">=</string>
     <string name="comma">.</string>
+    <string name="sinus">sin</string>
+    <string name="cosinus">cos</string>
+    <string name="tangens">tan</string>
+    <string name="log">log</string>
+    <string name="ln">ln</string>
+    <string name="square2">√</string>
+    <string name="power2">x²</string>
+    <string name="powerY">xʸ</string>
     <string name="percent">%</string>
     <string name="result">0</string>
     <string name="SimpleCalc">Simple Calc</string>

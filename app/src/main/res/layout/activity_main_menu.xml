@@ -38,7 +38,7 @@
       android:height="60dp"
       android:backgroundTint="#374955"
       android:fontFamily="sans-serif-medium"
-      android:onClick="openSimpleCalc"
+      android:onClick="openAdvancedCalc"
       android:text="@string/AdvancedCalc"
       android:textColor="#FFFFFF"
       android:textSize="20sp"

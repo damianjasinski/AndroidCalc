@@ -19,6 +19,11 @@ public class MainMenuActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openAdvancedCalc(View view) {
+        Intent intent = new Intent(this, AdvancedCalcActivity.class);
+        startActivity(intent);
+    }
+
     public void openAboutBtn(View view) {
         Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
