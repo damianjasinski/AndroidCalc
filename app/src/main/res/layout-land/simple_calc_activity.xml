@@ -15,6 +15,7 @@
         android:id="@+id/resultField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
         android:layout_weight="1"
         android:background="@null"
         android:fontFamily="sans-serif-medium"
@@ -24,9 +25,10 @@
         android:textColorHint="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84000003"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.84000003" />
 
     <TableLayout
         android:id="@+id/tableLayout"
