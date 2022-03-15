@@ -1,8 +1,10 @@
 package com.example.calc;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,14 +16,30 @@ import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MainActivity extends AppCompatActivity {
+public class SimpleCalcActivity extends AppCompatActivity {
     private String tempNumber = "";
+    EditText resultField;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.simple_calc_activity);
+        resultField = (EditText) findViewById(R.id.resultField);
+    }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("resultField", resultField.getText().toString());
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle inState) {
+        super.onRestoreInstanceState(inState);
+        String resultFieldVal = inState.getString("resultField");
+        if (resultFieldVal != null) {
+            resultField.setText(resultFieldVal);
+        }
     }
 
     public void onClickBtn(View view) {
@@ -29,13 +47,13 @@ public class MainActivity extends AppCompatActivity {
         Button clickedBtn = (Button)findViewById(view.getId());
         String btnValue = clickedBtn.getText().toString();
         try {
-            handleUserInput(btnValue, resultField);
+            handleUserInput(btnValue);
         } catch (ArithmeticException e) {
             resultField.setText("Error");
         }
     }
 
-    private void handleUserInput(String btnValue, EditText resultField) throws ArithmeticException {
+    private void handleUserInput(String btnValue) throws ArithmeticException {
         String resultFieldValue = resultField.getText().toString();
 
         if (resultFieldValue.equals("Error")) {
@@ -45,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             resultField.setText("");
         }
         else if (".".equals(btnValue) ) {
-            if(!checkIfComma(resultFieldValue)) {
+            if(!checkIfComma()) {
                 resultField.setText(resultFieldValue + btnValue);
             }
         }
@@ -62,16 +80,17 @@ public class MainActivity extends AppCompatActivity {
             resultField.setText(resultFieldValue + btnValue);
         }
         else if ("=".equals(btnValue)) {
-            compute(resultField);
+            compute();
         }
     }
 
-    private boolean checkIfComma(String resultFieldValue) {
-        String resultFieldValueRev = new StringBuilder(resultFieldValue).reverse().toString();
+    private boolean checkIfComma() {
+        String resultFieldVal = resultField.getText().toString();
+        String resultFieldValRev = new StringBuilder(resultFieldVal).reverse().toString();
         Pattern r = Pattern.compile("[-]?\\d*\\.?\\d*");
-        Matcher m = r.matcher(new StringBuilder(resultFieldValueRev));
+        Matcher m = r.matcher(new StringBuilder(resultFieldValRev));
         if (m.find()) {
-            String numberSubstring = resultFieldValueRev.substring(m.start(), m.end());
+            String numberSubstring = resultFieldValRev.substring(m.start(), m.end());
             if ( !"".equals(numberSubstring)){
                 return numberSubstring.contains(".");
             }
@@ -79,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    private void compute(EditText resultField) throws ArithmeticException {
+    private void compute() throws ArithmeticException {
         String exp = resultField.getText().toString();
         exp = exp.replaceAll("×", "*");
         exp = exp.replaceAll("÷", "/");
