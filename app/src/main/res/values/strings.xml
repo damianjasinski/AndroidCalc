@@ -20,7 +20,9 @@
     <string name="comma">.</string>
     <string name="percent">%</string>
     <string name="result">0</string>
-    <string name="SimpleCalc">Simple Calc </string>
+    <string name="SimpleCalc">Simple Calc</string>
+    <string name="AdvancedCalc">Advanced Calc</string>
+    <string name="About">About</string>
 
 
 </resources>
