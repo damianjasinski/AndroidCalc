@@ -8,6 +8,32 @@
     android:backgroundTint="#2C363A"
     tools:context=".MainMenuActivity">
 
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="#262F33"
+      android:minHeight="?attr/actionBarSize"
+      android:textAlignment="center"
+      app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0"
+      tools:layout_editor_absoluteX="109dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_vertical"
+        android:text="@string/MainMenu"
+        android:textAlignment="center"
+        android:textColor="#E3D7D7"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="14dp" />
+
+  </androidx.appcompat.widget.Toolbar>
+
   <Button
       android:id="@+id/simpleCalcBtn"
       android:layout_width="wrap_content"
