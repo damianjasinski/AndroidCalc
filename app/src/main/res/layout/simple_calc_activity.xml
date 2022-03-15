@@ -90,7 +90,7 @@
                 android:minHeight="75dp"
                 android:onClick="onClickBtn"
                 android:text="@string/clear"
-                android:textColor="#F3FF3C3C"
+                android:textColor="#FD5454"
                 android:textSize="36sp" />
 
             <Button
@@ -107,7 +107,7 @@
                 android:minHeight="75dp"
                 android:onClick="onClickBtn"
                 android:text="@string/divide"
-                android:textColor="#F3FF3C3C"
+                android:textColor="#FD5454"
                 android:textSize="36sp" />
 
             <Button
@@ -124,7 +124,7 @@
                 android:minHeight="75dp"
                 android:onClick="onClickBtn"
                 android:text="@string/mult"
-                android:textColor="#F3FF3C3C"
+                android:textColor="#FD5454"
                 android:textSize="36sp" />
 
             <Button
@@ -142,7 +142,7 @@
                 android:onClick="onClickBtn"
                 android:text="@string/backspace"
                 android:textAllCaps="true"
-                android:textColor="#F3FF3C3C"
+                android:textColor="#FD5454"
                 android:textScaleX="1.2"
                 android:textSize="36sp"
                 android:textStyle="bold" />
@@ -217,7 +217,7 @@
                 android:minHeight="75dp"
                 android:onClick="onClickBtn"
                 android:text="@string/minus"
-                android:textColor="#F3FF3C3C"
+                android:textColor="#FD5454"
                 android:textScaleX="1.8"
                 android:textSize="36sp" />
 
@@ -291,7 +291,7 @@
                 android:minHeight="75dp"
                 android:onClick="onClickBtn"
                 android:text="@string/plus"
-                android:textColor="#F3FF3C3C"
+                android:textColor="#FD5454"
                 android:textSize="36sp" />
 
         </TableRow>
@@ -364,7 +364,7 @@
                 android:minHeight="75dp"
                 android:onClick="onClickBtn"
                 android:text="@string/comma"
-                android:textColor="#F3FF3C3C"
+                android:textColor="#FD5454"
                 android:textSize="36sp" />
 
         </TableRow>
@@ -406,7 +406,7 @@
                 android:minHeight="75dp"
                 android:onClick="onClickBtn"
                 android:text="@string/equals"
-                android:textColor="#F3FF3C3C"
+                android:textColor="#FD5454"
                 android:textSize="36sp" />
 
         </TableRow>

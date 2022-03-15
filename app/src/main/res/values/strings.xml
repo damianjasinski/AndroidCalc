@@ -33,6 +33,6 @@
     <string name="AdvancedCalc">Advanced Calc</string>
     <string name="About">About</string>
     <string name="AboutDescrpition">First exercise University Project for subject Mobile Applications. \n \nSimple calculator and advanced calculator implementation with help of exp4j library.\n\n\n\nJasiński Damian</string>
-
+    <string name="MainMenu"> My calculator </string>
 
 </resources>
