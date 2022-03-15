@@ -8,27 +8,6 @@
     android:backgroundTint="#474C50"
     tools:context=".AdvancedCalcActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#262F33"
-        android:minHeight="?attr/actionBarSize"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:gravity="center_vertical"
-            android:text="@string/AdvancedCalc"
-            android:textColor="#E3D7D7"
-            android:textSize="24sp"
-            tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="14dp" />
-
-    </androidx.appcompat.widget.Toolbar>
 
     <EditText
         android:id="@+id/resultField"
@@ -66,167 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="6dp">
-
-            <Button
-                android:id="@+id/buttonSquare"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="#374955"
-                android:focusable="false"
-                android:focusableInTouchMode="true"
-                android:focusedByDefault="true"
-                android:fontFamily="sans-serif-medium"
-                android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
-                android:onClick="onClickBtn"
-                android:text="@string/square2"
-                android:textAllCaps="false"
-                android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/buttonPower2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="#374955"
-                android:fontFamily="sans-serif-medium"
-                android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
-                android:onClick="onClickBtn"
-                android:text="@string/power2"
-                android:textAllCaps="false"
-                android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/buttonPowerY"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="#374955"
-                android:fontFamily="sans-serif-medium"
-                android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
-                android:onClick="onClickBtn"
-                android:text="@string/powerY"
-                android:textAllCaps="false"
-                android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/buttonPowerY2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="#374955"
-                android:fontFamily="sans-serif-medium"
-                android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
-                android:onClick="onClickBtn"
-                android:text="@string/rightBracket"
-                android:textAllCaps="false"
-                android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="6dp">
-
-            <Button
-                android:id="@+id/buttonSin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="#374955"
-                android:focusable="false"
-                android:focusableInTouchMode="true"
-                android:focusedByDefault="true"
-                android:fontFamily="sans-serif-medium"
-                android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
-                android:onClick="onClickBtn"
-                android:text="@string/sinus"
-                android:textAllCaps="false"
-                android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/buttonCos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="#374955"
-                android:fontFamily="sans-serif-medium"
-                android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
-                android:onClick="onClickBtn"
-                android:text="@string/cosinus"
-                android:textAllCaps="false"
-                android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/buttonTan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="#374955"
-                android:fontFamily="sans-serif-medium"
-                android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
-                android:onClick="onClickBtn"
-                android:text="@string/tangens"
-                android:textAllCaps="false"
-                android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/buttonLog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="#374955"
-                android:fontFamily="sans-serif-light"
-                android:maxWidth="50dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
-                android:onClick="onClickBtn"
-                android:text="@string/log10"
-                android:textAllCaps="false"
-                android:textColor="#F3FF3C3C"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="6dp">
+            android:layout_marginTop="7dp">
 
             <Button
                 android:id="@+id/buttonC"
@@ -240,12 +59,10 @@
                 android:focusedByDefault="true"
                 android:fontFamily="sans-serif-medium"
                 android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/clear"
                 android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonDiv"
@@ -256,12 +73,10 @@
                 android:backgroundTint="#374955"
                 android:fontFamily="sans-serif-black"
                 android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/divide"
                 android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonMult"
@@ -272,12 +87,40 @@
                 android:backgroundTint="#374955"
                 android:fontFamily="sans-serif-black"
                 android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/mult"
                 android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonPower2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-medium"
+                android:maxWidth="100dp"
+                android:onClick="onClickBtn"
+                android:text="@string/power2"
+                android:textAllCaps="false"
+                android:textColor="#F3FF3C3C"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonPowerY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-medium"
+                android:maxWidth="100dp"
+                android:onClick="onClickBtn"
+                android:text="@string/powerY"
+                android:textAllCaps="false"
+                android:textColor="#F3FF3C3C"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonBack"
@@ -288,14 +131,12 @@
                 android:backgroundTint="#374955"
                 android:fontFamily="sans-serif-thin"
                 android:maxWidth="50dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/backspace"
                 android:textAllCaps="true"
                 android:textColor="#F3FF3C3C"
                 android:textScaleX="1.2"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -304,7 +145,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="6dp">
+            android:layout_marginBottom="0dp">
 
             <Button
                 android:id="@+id/buttonSeven"
@@ -313,12 +154,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/seven"
                 android:textColor="#FFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonEight"
@@ -327,12 +166,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/eight"
                 android:textColor="#FFFFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonNine"
@@ -341,12 +178,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/nine"
                 android:textColor="#FFFFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonMinus"
@@ -356,13 +191,44 @@
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
                 android:fontFamily="sans-serif-black"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/minus"
                 android:textColor="#F3FF3C3C"
                 android:textScaleX="1.8"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonSquare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#374955"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="true"
+                android:fontFamily="sans-serif-medium"
+                android:maxWidth="100dp"
+                android:onClick="onClickBtn"
+                android:text="@string/square2"
+                android:textAllCaps="false"
+                android:textColor="#F3FF3C3C"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonCos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-medium"
+                android:maxWidth="100dp"
+                android:onClick="onClickBtn"
+                android:text="@string/cosinus"
+                android:textAllCaps="false"
+                android:textColor="#F3FF3C3C"
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -370,7 +236,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="6dp">
+            android:layout_marginBottom="0dp">
 
             <Button
                 android:id="@+id/buttonFour"
@@ -379,12 +245,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/four"
                 android:textColor="#FFFFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonFive"
@@ -393,12 +257,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/five"
                 android:textColor="#FFFFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonSix"
@@ -407,12 +269,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/six"
                 android:textColor="#FFFFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonAdd"
@@ -423,12 +283,40 @@
                 android:backgroundTint="#374955"
                 android:fontFamily="sans-serif-black"
                 android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/plus"
                 android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-light"
+                android:maxWidth="50dp"
+                android:onClick="onClickBtn"
+                android:text="@string/log10"
+                android:textAllCaps="false"
+                android:textColor="#F3FF3C3C"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonEqual3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-medium"
+                android:onClick="onClickBtn"
+                android:text="@string/logNat"
+                android:textAllCaps="false"
+                android:textColor="#F3FF3C3C"
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -436,7 +324,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="6dp">
+            android:layout_marginBottom="0dp">
 
             <Button
                 android:id="@+id/buttonOne"
@@ -445,12 +333,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/one"
                 android:textColor="#FFFFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonTwo"
@@ -459,12 +345,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/two"
                 android:textColor="#FFFFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonThree"
@@ -473,12 +357,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/three"
                 android:textColor="#FFFFFFFF"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonComma"
@@ -489,12 +371,43 @@
                 android:backgroundTint="#374955"
                 android:fontFamily="sans-serif-black"
                 android:maxWidth="100dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/comma"
                 android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonSin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#374955"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:focusedByDefault="true"
+                android:fontFamily="sans-serif-medium"
+                android:maxWidth="100dp"
+                android:onClick="onClickBtn"
+                android:text="@string/sinus"
+                android:textAllCaps="false"
+                android:textColor="#F3FF3C3C"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonTan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-medium"
+                android:maxWidth="100dp"
+                android:onClick="onClickBtn"
+                android:text="@string/tangens"
+                android:textAllCaps="false"
+                android:textColor="#F3FF3C3C"
+                android:textSize="20sp" />
 
         </TableRow>
 
@@ -503,7 +416,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="5dp">
 
             <Button
                 android:id="@+id/buttonZero"
@@ -512,28 +425,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/zero"
                 android:textColor="#FFFFFFFF"
-                android:textSize="24sp" />
-
-            <Button
-                android:id="@+id/buttonEqual3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="#374955"
-                android:fontFamily="sans-serif-medium"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
-                android:onClick="onClickBtn"
-                android:text="@string/logNat"
-                android:textAllCaps="false"
-                android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonPerc"
@@ -542,15 +437,13 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
-                android:fontFamily="sans-serif-medium"
+                android:fontFamily="sans-serif-light"
                 android:maxWidth="50dp"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/percent"
                 android:textAllCaps="false"
                 android:textColor="#F3FF3C3C"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <Button
@@ -561,12 +454,25 @@
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
                 android:fontFamily="sans-serif-black"
-                android:maxHeight="200dp"
-                android:minHeight="60dp"
                 android:onClick="onClickBtn"
                 android:text="@string/equals"
                 android:textColor="#F3FF3C3C"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonPowerY2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#374955"
+                android:fontFamily="sans-serif-medium"
+                android:maxWidth="100dp"
+                android:onClick="onClickBtn"
+                android:text="@string/rightBracket"
+                android:textAllCaps="false"
+                android:textColor="#F3FF3C3C"
+                android:textSize="20sp" />
 
         </TableRow>
 
