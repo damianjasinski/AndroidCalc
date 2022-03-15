@@ -14,8 +14,13 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
     }
 
-    public void openSimpleCalc(View view) {
+    public void openSimpleCalcBtn(View view) {
         Intent intent = new Intent(this, SimpleCalcActivity.class);
+        startActivity(intent);
+    }
+
+    public void openAboutBtn(View view) {
+        Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
     }
 }

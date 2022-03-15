@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:backgroundTint="#293337"
+    android:backgroundTint="#2C363A"
     tools:context=".MainMenuActivity">
 
   <Button
@@ -17,7 +17,7 @@
       android:height="60dp"
       android:backgroundTint="#374955"
       android:fontFamily="sans-serif-medium"
-      android:onClick="openSimpleCalc"
+      android:onClick="openSimpleCalcBtn"
       android:text="@string/SimpleCalc"
       android:textColor="#FFFFFF"
       android:textSize="20sp"
@@ -58,7 +58,7 @@
       android:height="60dp"
       android:backgroundTint="#374955"
       android:fontFamily="sans-serif-medium"
-      android:onClick="openSimpleCalc"
+      android:onClick="openAboutBtn"
       android:text="@string/About"
       android:textColor="#FFFFFF"
       android:textSize="20sp"
