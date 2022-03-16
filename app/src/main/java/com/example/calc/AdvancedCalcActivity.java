@@ -65,7 +65,6 @@ public class AdvancedCalcActivity extends AppCompatActivity {
                 resultField.setText(exp + btnValue);
             }
         }
-
         else if (btnValue.matches("sin|ln|cos|tan")) {
             resultField.setText(exp + btnValue + "(");
         }
@@ -73,7 +72,6 @@ public class AdvancedCalcActivity extends AppCompatActivity {
         else if ("log".equals(btnValue)) {
             resultField.setText(exp + btnValue + "(");
         }
-
         else if (")".equals(btnValue)) {
             long countRightBraces = exp.chars()
                     .filter(ch -> ch == '(')
@@ -85,41 +83,37 @@ public class AdvancedCalcActivity extends AppCompatActivity {
                 resultField.setText(exp + btnValue);
             }
         }
-
         else if ("x²".equals(btnValue) && exp.length() > 0) {
             resultField.setText(exp + "^(2)");
         }
-
         else if ("%".equals(btnValue) ) {
             resultField.setText(exp + "%");
         }
-
         else if ("√".equals(btnValue)) {
             resultField.setText(exp + "sqrt(");
         }
-
         else if ("xʸ".equals(btnValue) && exp.length() > 0) {
             resultField.setText(exp + "^(");
         }
-
         else if ("⌫".equals(btnValue) && exp.length() > 0) {
             resultField.setText(exp.substring(0, exp.length() - 1));
         }
         else if ("-".equals(btnValue) && resultField.length() == 0) {
             resultField.setText("-");
         }
+        else if (("-".equals(btnValue) && Character.toString(exp.charAt(exp.length() - 1)).matches("[×÷]"))) {
+            resultField.setText(exp + btnValue);
+        }
         else if (btnValue.matches("[0-9]")) {
             resultField.setText(exp + btnValue);
         }
-        else {
-            String s = Character.toString(exp.charAt(exp.length() - 1));
-            if (btnValue.matches("[×÷+-]") && exp.length() > 0 && s.matches("[0-9|sin|cos|tan|log|ln|(|)]")) {
-                resultField.setText(exp + btnValue);
-            }
-            else if ("=".equals(btnValue)) {
-                compute();
-            }
+        else if (btnValue.matches("[×÷+-]") && exp.length() > 0 && Character.toString(exp.charAt(exp.length() - 1)).matches("[0-9|sin|cos|tan|log|ln|(|)]"))  {
+            resultField.setText(exp + btnValue);
         }
+        else if ("=".equals(btnValue)) {
+            compute();
+        }
+
     }
 
     // check if comma can be placed (only one comma in each number)
