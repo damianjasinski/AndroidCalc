@@ -7,3 +7,8 @@ Calc will have 3 activities:
   3. Advanced calc
   4. About
   
+![image](https://user-images.githubusercontent.com/73436795/160457794-636117e0-e476-4a0c-aa03-ec465517422b.png)
+![image](https://user-images.githubusercontent.com/73436795/160457897-095b95df-e1bc-46bf-8cf7-d1242f8fd660.png)
+![image](https://user-images.githubusercontent.com/73436795/160457909-f299bc79-8338-4db9-866e-aaaca00f9236.png)
+![image](https://user-images.githubusercontent.com/73436795/160457945-6198e8dc-8fc0-4c14-aaa4-e7f934ef0b27.png)
+![image](https://user-images.githubusercontent.com/73436795/160457963-ff1225ca-94a6-4330-81d2-df484b608dbe.png)
