@@ -17,9 +17,7 @@
         android:layout_height="wrap_content"
         android:background="#262F33"
         android:minHeight="?attr/actionBarSize"
-        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,7 +35,7 @@
     <EditText
         android:id="@+id/resultField"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/resultFieldFontSize"
         android:layout_marginRight="5dp"
         android:layout_weight="1"
         android:background="@null"
@@ -47,23 +45,23 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/layout_bg"
+        android:layout_height="0dp"
 
+        android:background="@drawable/layout_bg"
         android:backgroundTint="#2C363A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultField"
         app:layout_constraintVertical_bias="1.0">
 
         <TableRow
@@ -71,12 +69,13 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/buttonSin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -91,12 +90,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/clear"
                 android:textColor="#FD5454"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonCos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -108,12 +107,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/divide"
                 android:textColor="#FD5454"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonTan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -125,12 +124,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/mult"
                 android:textColor="#FD5454"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonPerc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -144,7 +143,7 @@
                 android:textAllCaps="true"
                 android:textColor="#FD5454"
                 android:textScaleX="1.2"
-                android:textSize="32sp"
+                android:textSize="@dimen/btnFontSize"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -153,12 +152,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/buttonSeven"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -169,12 +169,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/seven"
                 android:textColor="#FFFFFF"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonEight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -185,12 +185,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/eight"
                 android:textColor="#FFFFFFFF"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonNine"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -201,12 +201,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/nine"
                 android:textColor="#FFFFFFFF"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonMinus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -219,7 +219,7 @@
                 android:text="@string/minus"
                 android:textColor="#FD5454"
                 android:textScaleX="1.8"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
         </TableRow>
 
@@ -227,12 +227,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/buttonFour"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -243,12 +244,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/four"
                 android:textColor="#FFFFFFFF"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonFive"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -259,12 +260,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/five"
                 android:textColor="#FFFFFFFF"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonSix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -275,12 +276,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/six"
                 android:textColor="#FFFFFFFF"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonAdd"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -292,7 +293,7 @@
                 android:onClick="onClickBtn"
                 android:text="@string/plus"
                 android:textColor="#FD5454"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
         </TableRow>
 
@@ -300,12 +301,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/buttonOne"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -316,12 +318,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/one"
                 android:textColor="#FFFFFFFF"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonTwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -332,12 +334,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/two"
                 android:textColor="#FFFFFFFF"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonThree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -348,12 +350,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/three"
                 android:textColor="#FFFFFFFF"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonComma"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -365,7 +367,7 @@
                 android:onClick="onClickBtn"
                 android:text="@string/comma"
                 android:textColor="#FD5454"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
         </TableRow>
 
@@ -374,12 +376,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="15dp">
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/buttonZero"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -390,12 +393,12 @@
                 android:onClick="onClickBtn"
                 android:text="@string/zero"
                 android:textColor="#FFFFFFFF"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
             <Button
                 android:id="@+id/buttonEqual"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="#374955"
@@ -407,7 +410,7 @@
                 android:onClick="onClickBtn"
                 android:text="@string/equals"
                 android:textColor="#FD5454"
-                android:textSize="32sp" />
+                android:textSize="@dimen/btnFontSize" />
 
         </TableRow>
 

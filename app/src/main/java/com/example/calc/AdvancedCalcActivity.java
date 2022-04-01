@@ -113,7 +113,6 @@ public class AdvancedCalcActivity extends AppCompatActivity {
         else if ("=".equals(btnValue)) {
             compute();
         }
-
     }
 
     // check if comma can be placed (only one comma in each number)

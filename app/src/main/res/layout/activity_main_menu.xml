@@ -15,7 +15,7 @@
       android:background="#262F33"
       android:minHeight="?attr/actionBarSize"
       android:textAlignment="center"
-      app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+
       app:layout_constraintTop_toTopOf="parent"
       app:layout_constraintVertical_bias="0.0"
       tools:layout_editor_absoluteX="109dp">
@@ -24,7 +24,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:gravity="center_vertical"
         android:text="@string/MainMenu"
         android:textAlignment="center"
         android:textColor="#E3D7D7"
@@ -36,62 +35,55 @@
 
   <Button
       android:id="@+id/simpleCalcBtn"
-      android:layout_width="wrap_content"
+      android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:layout_marginBottom="5dp"
       android:width="220dp"
-      android:height="60dp"
       android:backgroundTint="#374955"
       android:fontFamily="sans-serif-medium"
       android:onClick="openSimpleCalcBtn"
       android:text="@string/SimpleCalc"
       android:textColor="#FFFFFF"
-      android:textSize="20sp"
+      android:textSize="@dimen/btnFontSize"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.502"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.412" />
+      app:layout_constraintVertical_bias="0.38" />
 
   <Button
       android:id="@+id/button2"
-      android:layout_width="wrap_content"
+      android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="5dp"
-      android:layout_marginBottom="5dp"
       android:width="220dp"
-      android:height="60dp"
       android:backgroundTint="#374955"
       android:fontFamily="sans-serif-medium"
       android:onClick="openAdvancedCalc"
       android:text="@string/AdvancedCalc"
       android:textColor="#FFFFFF"
-      android:textSize="20sp"
+      android:textSize="@dimen/btnFontSize"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.502"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.499" />
+      app:layout_constraintVertical_bias="0.48000002" />
 
   <Button
       android:id="@+id/button3"
-      android:layout_width="wrap_content"
+      android:layout_width="0dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="5dp"
       android:width="220dp"
-      android:height="60dp"
       android:backgroundTint="#374955"
       android:fontFamily="sans-serif-medium"
       android:onClick="openAboutBtn"
       android:text="@string/About"
       android:textColor="#FFFFFF"
-      android:textSize="20sp"
+      android:textSize="@dimen/btnFontSize"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.502"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.585" />
+      app:layout_constraintVertical_bias="0.58000004" />
 </androidx.constraintlayout.widget.ConstraintLayout>
